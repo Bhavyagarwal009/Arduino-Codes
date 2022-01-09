@@ -1,0 +1,17 @@
+int LED = 13;
+int buttonPin = 7;
+int status = false;
+
+void setup(){
+  pinMode(LED, OUTPUT);
+  pinMode(buttonPin, INPUT);
+}
+
+void loop() 
+{
+  if(digitalRead(buttonPin) == HIGH)
+  {   
+  digitalWrite(LED, status);
+  status = !status;
+  }
+}
